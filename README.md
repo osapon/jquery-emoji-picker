@@ -2,6 +2,9 @@
 
 ## Description ##
 
+Original repository is [wedgies/jquery-emoji-picker](https://github.com/wedgies/jquery-emoji-picker)
+This repository is remodeled for use with [osapon/halcyon](https://github.com/osapon/halcyon).
+
 The top 3 things your users love:
 
 1. Animated GIFs
@@ -14,16 +17,10 @@ Want to see a [demo](http://wedgies.github.io/jquery-emoji-picker/demo.html)?
 
 ## Installation ##
 
-You can install the assets via bower:
-
-```bash
-$ bower install jquery-emoji-picker
-```
-
 Make sure that jQuery is included in your `<head></head>` tag.  If you are not already including it, you can load it from jQuery's CDN:
 
 ```html
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 ```
 
 Add the following to your `<head></head>` tag:
@@ -33,26 +30,8 @@ Add the following to your `<head></head>` tag:
 <script type="text/javascript" src="js/jquery.emojipicker.js"></script>
 
 <!-- Emoji Data -->
-<link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.a.css">
-<script type="text/javascript" src="js/jquery.emojis.js"></script>
-```
-
-The jQuery Emoji Picker has 3 icon sets to choose from - Apple, Twitter, and Google icons. The Apple icons are used by default. To instead use Twitter or Google icons, replace the stylesheet:
-
-```html
-<link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.a.css">
-```
-
-with either Google:
-
-```html
-<link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.g.css">
-```
-
-or Twitter:
-
-```html
 <link rel="stylesheet" type="text/css" href="css/jquery.emojipicker.tw.css">
+<script type="text/javascript" src="js/jquery.emojis.js"></script>
 ```
 
 Initialize the jQuery Emoji Picker by calling `emojiPicker` on an input element with optional parameters, described below:
@@ -75,16 +54,18 @@ The height of the picker in pixels. Must be between 100-350px. Defaults to 250px
 ### fadeTime (int) ###
 The amount of time in ms that it will take for the picker to fade in and out. Defaults to 100ms if no fadeTime is specified.
 
-### iconColor (string) ###
-The color of the smiley image that appears on the picker button. Acceptable values are ['white', 'black', 'gray', 'yellow']. Defaults to 'black' if no iconColor is specified.
-
-### iconBackgroundColor (string) ###
-The background color of the picker button. Any hex value is acceptable. Defaults to '#eee' if no iconBackgroundColor is specified.
-
 ### recentCount (int) ###
 The number of emojis that should show in the 'Recently Used' section. Defaults to 36 if no recentCount is specified.
 
 Note: 'Recently Used' will only show for the user if their browser supports HTML5 Local Storage.
+
+### recentlyLabel (string) ###
+### searchLabel (string) ###
+### searchPlaceholder (string) ###
+Can change the label.
+
+### categories (array(object)) ###
+Can change the label. And can add category.
 
 ### button (boolean) ###
 Whether to show the emoji button on the input or not. Defaults to true. If you hide the button, you will probably need to trigger the emoji entry manually (see below).
