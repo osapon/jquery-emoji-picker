@@ -468,7 +468,7 @@
 
         if (offsetFromTop <= 0) {
           $(section).parents('.emojiPicker').find('nav .tab').removeClass('active');
-          $(section).parents('.emojiPicker').find('nav .tab[data-tab=' + section.className + ']').addClass('active');
+          $(section).parents('.emojiPicker').find('nav .tab[data-tab="' + section.className + '"]').addClass('active');
         }
       });
     },
