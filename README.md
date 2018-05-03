@@ -123,8 +123,6 @@ jQuery Emoji Picker is disabled for mobile devices, which already support the em
 The jQuery Emoji Picker would not be here without the CSS and image data generated from Wemoji:
 [https://github.com/wedgies/wemoji](https://github.com/wedgies/wemoji)
 
-Apple Emoji: Copyright (C) Apple Inc. - OS X 10.10.3
-Android Emoji: Copyright (C) The Android Open Source Project - Lollipop
 Twitter Emoji Copyright (C) Twitter, Inc. - The original release
 
 ## License ##

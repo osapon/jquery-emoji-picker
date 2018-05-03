@@ -299,6 +299,7 @@
      ************/
 
     iconClicked : function() {
+      this.pickerStarted = Date.now();
       if ( this.$picker.is(':hidden') ) {
         this.show();
         if( this.$picker.find('.search input').length > 0 ) {
@@ -325,7 +326,6 @@
       var emojiShortcode, emoji, unicode;
 
       if (emojiSpan.hasClass("skinchooser")) {
-//console.log('skinchooserから選んだ');
         emojiShortcode = $("#pref-base").data("shortcode");
         emoji = findEmoji(emojiShortcode);
         emoji.prefchosen = true;
@@ -344,8 +344,6 @@
         emoji = findEmoji(emojiShortcode);
         unicode = emoji.unicode;
       }
-//console.log(emojiShortcode);
-//console.log(emoji);
       if(emoji.skintones && (!emoji.prefchosen || clickLen > 500)) {
         this.showPrefPane(emoji, emojiSpan);
         return;
@@ -478,7 +476,8 @@
     },
 
     clickOutside: function(e) {
-      if ( this.active ) {
+      var clickLen = Date.now() - this.pickerStarted;
+      if ( this.active && (clickLen > 500) ) {
         this.hidePrefPane();
         this.hide();
       }
