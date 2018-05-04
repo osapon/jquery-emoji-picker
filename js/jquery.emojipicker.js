@@ -179,9 +179,6 @@
       var emojiShortcode = pref.attr('class').split('emoji-')[1];
       if ( typeof emojiShortcode != 'undefined' ) pref.removeClass('emoji-' + emojiShortcode);
       $("#skinprefs").fadeOut();
-      if (this.settings.onHidePref) {
-        this.settings.onHidePref( this.$picker, this.settings, this.active );
-      }
     },
 
     showPrefPane: function(emoji, emojiSpan) {
@@ -195,9 +192,6 @@
           top: os.top-20,
           left: os.left-100
         }).fadeIn();
-        if (this.settings.onShowPref) {
-          this.settings.onShowPref( this.$picker, this.settings, this.active );
-        }
       },200);
     },
 
