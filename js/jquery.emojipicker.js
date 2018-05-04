@@ -506,8 +506,9 @@
         $.each($.fn.emojiPicker.emojis, function(i, emoji) {
           var shortcode = emoji.shortcode;
           if ( shortcode.indexOf(searchTerm) > -1 ) {
-            //ToDo:カスタム絵文字対応
-            results.push('<em><div class="emoji emoji-' + shortcode + '"></div></em>');
+            results.push('<em><span class="emoji emoji-' + shortcode + '">');
+            if ( emoji.unicode.indexOf('http') === 0 ) results.push('<img src="'+emoji.unicode+'">');
+            results.push('</span></em>');
           }
         });
         searchEmojiWrap.append(results.join(''));
