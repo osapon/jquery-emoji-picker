@@ -102,7 +102,7 @@
         // This can cause issues if the element is not visible when it is initiated
         var objectWidth = this.$el.width();
 
-        this.$el.width(objectWidth);
+        //this.$el.width(objectWidth);
 
         this.$wrapper = this.$el
           .wrap("<div class='emojiPickerIconWrap'></div>")
