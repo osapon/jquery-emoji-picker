@@ -91,3 +91,6 @@ span.prefseparator {
   height: 2em;
   float:left;
 }
+span.emoji.skinchooser {
+  width:100%;
+}
